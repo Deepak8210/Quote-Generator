@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./images/red-gold.jpeg");
+  background-size: cover;
+  font-family: "Playfair Display", serif;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  color: rgb(244, 163, 65);
+}
+.quote-contents {
+  border: 1px solid black;
+  max-width: 800px;
+  min-height: 200px;
+  padding: 1.5rem 3.5rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+  box-shadow: 4px 4px 10px 0.5px rgba(193, 130, 51, 0.5);
+  border-top: 1px solid rgba(193, 130, 51, 0.5);
+  border-bottom: 2px solid rgba(193, 130, 51, 0.5);
+  border-left: 1px solid rgba(193, 130, 51, 0.5);
+  border-right: 1px solid rgba(193, 130, 51, 0.5);
+
+  text-align: center;
+}
+.quote-contents h1 {
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+}
+i {
+  transform: translateY(-20%);
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.bxs-quote-left {
+  color: black;
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+  color: #7a0807;
+}
+.bxs-quote-right {
+  color: black;
+  font-size: 2.5rem;
+  margin-left: 0.5rem;
+  color: #7a0807;
+}
+
+.btn {
+  padding: 0.3rem 1.3rem;
+  font-family: "Playfair Display", serif;
+  background-color: #180000;
+  color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 1px 1px 0 0 rgba(193, 130, 51, 0.5);
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  filter: brightness(120%);
+}
+
+.btn:hover .bx {
+  color: #38a1f3;
+}
+.btn:active {
+  transform: translatey(1px);
+  box-shadow: 0px 0px 0 0 rgba(193, 130, 51, 0.5);
+}
+i {
+  transform: translate(0);
+  margin: 0;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+.author {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 3px;
+}
+/* loader */
+.loader {
+  border: 16px solid rgb(193, 130, 51);
+  border-top: 16px solid#7a0807;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .quote-contents {
+    padding: 1rem;
+  }
+  .quote-contents h1 {
+    font-size: 1.5rem;
+  }
+}
