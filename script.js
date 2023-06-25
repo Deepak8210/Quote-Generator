@@ -50,7 +50,7 @@ getQuote();
 quoteBtn.addEventListener("click", getQuote);
 
 function tweetQuote() {
-  const tweetUrl = `https://twitter.com/intent/tweet/?text=${mainQuote.textContent} - ${authorLabel.textContent}`;
+  const tweetUrl = `https://twitter.com/intent/tweet/?text=${mainQuote.textContent}  ${authorLabel.textContent}`;
   window.open(tweetUrl, "_blank");
 }
 twitterBtn.addEventListener("click", tweetQuote);
