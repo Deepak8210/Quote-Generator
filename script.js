@@ -9,8 +9,8 @@ const quoteContainer = document.querySelector(".quote-contents");
 
 const newQuote = function () {
   let randomNo = Math.trunc(Math.random() * apiQuotes.length);
-  const quote = apiQuotes[randomNo].text;
-  const author = apiQuotes[randomNo].author;
+  const quote = apiQuotes.quote;
+  const author = apiQuotes.author;
   mainQuote.textContent = `${quote}`;
   authorLabel.textContent = `- ${author || "Anonymous"}`;
 };
@@ -31,7 +31,7 @@ const hideLoadingBar = function () {
 const getQuote = async function () {
   showLoadingBar();
 
-  const apiUrl = "https://type.fit/api/quotes";
+  const apiUrl = "https://quotes-api-self.vercel.app/quote";
   try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
